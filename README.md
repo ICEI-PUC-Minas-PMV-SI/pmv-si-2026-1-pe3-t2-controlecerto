@@ -1,4 +1,4 @@
-# Título do Projeto
+# Controle Certo
 
 `CURSO: Sistemas de Informação`
 
@@ -10,16 +10,16 @@ Descrever resumidamente, em um ou dois parágrafos, o projeto que está sendo de
 
 ## Integrantes
 
-* Nome completo do aluno 1
-* Nome completo do aluno 2
-* Nome completo do aluno 3
-* Nome completo do aluno 4
-* Nome completo do aluno 5
-* Nome completo do aluno 6
+* Hudson Gomes Machado
+* Iago Maldonado Aguiar Oliveira
+* Igor Malfacini Dutra
+* Josias Nicácio de Oliveira
+* Luiz Felipe Alves Costa
+* Luiz Henrique Baptista Procópio Valle
 
 ## Orientador
 
-* Nome completo do professor 
+* Joana Gabriela Ribeiro de Souza
 
 # Planejamento
 
