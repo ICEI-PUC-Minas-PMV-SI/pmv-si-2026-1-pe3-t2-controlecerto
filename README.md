@@ -6,7 +6,9 @@
 
 `SEMESTRE: 3º`
 
-Descrever resumidamente, em um ou dois parágrafos, o projeto que está sendo desenvolvido.
+O projeto Controle Certo consiste no desenvolvimento de um sistema web voltado para o auxílio no controle e na organização das movimentações financeiras de empresas. A aplicação tem como objetivo oferecer um ambiente digital onde seja possível registrar, acompanhar e visualizar receitas e despesas de forma estruturada, contribuindo para uma gestão financeira mais clara e organizada. Por meio do sistema, os usuários poderão centralizar informações financeiras que muitas vezes são registradas de forma dispersa, como em planilhas ou anotações manuais.
+
+A proposta busca facilitar o acompanhamento do fluxo financeiro empresarial, permitindo uma melhor visualização das movimentações registradas e apoiando a organização das informações relacionadas à gestão financeira. O sistema é direcionado principalmente a proprietários de pequenas e médias empresas e profissionais responsáveis pelo controle financeiro, oferecendo uma interface simples e acessível que possibilite o uso eficiente da ferramenta mesmo por usuários com conhecimentos básicos em tecnologia.
 
 ## Integrantes
 
