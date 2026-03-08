@@ -20,7 +20,7 @@ Diante desse cenário, surge a necessidade de soluções tecnológicas que auxil
 
 ### Objetivo geral
 
-Desenvolver um sistema web denominado Controla Certo, com o objetivo de auxiliar empresas no controle e organização de suas movimentações financeiras, contribuindo para uma gestão financeira mais clara e estruturada.
+Desenvolver um sistema web denominado Controle Certo, com o objetivo de auxiliar empresas no controle e organização de suas movimentações financeiras, contribuindo para uma gestão financeira mais clara e estruturada.
 
 ### Objetivos específicos
 
