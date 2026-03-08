@@ -27,7 +27,7 @@ A proposta busca facilitar o acompanhamento do fluxo financeiro empresarial, per
 
 | Etapa         | Atividades |
 |  :----:   | ----------- |
-| ETAPA 1         |[Introdução](docs/introducao.md) <br> [Estado da Arte](docs/estado.md) <br> [Referências](docs/referencias.md) |
+| ETAPA 1         |[Introdução](docs/1.introducao.md) <br> [Estado da Arte](docs/estado.md) <br> [Referências](docs/referencias.md) |
 | ETAPA 2         |[Especificação de Requisitos de Software](docs/especificacao.md) |
 | ETAPA 3         |[Design de Interação](docs/design.md) |
 | ETAPA 4        |[Testes de Software](docs/testes.md) |
