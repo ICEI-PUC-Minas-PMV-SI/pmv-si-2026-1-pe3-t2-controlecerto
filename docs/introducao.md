@@ -1,20 +1,45 @@
 # 1. INTRODUÇÃO
 
-Contextualizar a área de pesquisa do trabalho, apresentando conceitos e dados relacionados antes de apresentar a problemática a ser investigada.
+A gestão financeira é um dos elementos fundamentais para o funcionamento e a sustentabilidade de qualquer organização. O controle adequado das receitas, despesas e demais movimentações financeiras permite que empresas acompanhem sua situação econômica, planejem investimentos e tomem decisões estratégicas de maneira mais segura.
+
+Entretanto, muitas empresas, especialmente de pequeno e médio porte, ainda enfrentam dificuldades para organizar e acompanhar suas informações financeiras de forma estruturada. Em diversos casos, o controle financeiro é realizado por meio de planilhas eletrônicas ou registros manuais, o que pode gerar inconsistências de dados, dificuldade de acompanhamento das movimentações e limitações na análise das informações financeiras.
+
+Nesse contexto, o uso de sistemas computacionais voltados para a gestão financeira pode contribuir significativamente para melhorar a organização e o acompanhamento dessas informações. Ferramentas digitais permitem centralizar dados, facilitar o registro de movimentações e oferecer uma visualização mais clara da situação financeira de uma empresa.
 
 ## 1.1. Problema
 
-Nesse momento você deve apresentar o problema que a sua aplicação deve resolver. No entanto, não é a hora de comentar sobre a aplicação. 
-Descreva também o contexto em que essa aplicação será usada, se houver: empresa, tecnologias, etc. Novamente, descreva apenas o que de fato existir, pois ainda não é a hora de apresentar requisitos detalhados ou projetos.
+A organização das informações financeiras é uma atividade essencial para a gestão de empresas. No entanto, muitos negócios ainda utilizam métodos pouco estruturados para registrar e acompanhar suas receitas e despesas. O uso de planilhas isoladas ou anotações manuais pode dificultar a consolidação das informações financeiras e tornar o acompanhamento do fluxo de caixa mais complexo.
+
+A falta de uma ferramenta específica para o gerenciamento dessas informações pode resultar em dificuldades para visualizar a situação financeira da empresa em determinado período, identificar padrões de despesas ou avaliar o desempenho financeiro do negócio. Além disso, a ausência de organização adequada das movimentações financeiras pode comprometer a qualidade das análises utilizadas no processo de tomada de decisões administrativas.
+
+Diante desse cenário, surge a necessidade de soluções tecnológicas que auxiliem empresas na organização, registro e acompanhamento de suas movimentações financeiras de maneira mais estruturada e acessível.
 
 ## 1.2. Objetivos do trabalho
 
-Aqui você deve descrever os objetivos do trabalho indicando que o objetivo geral é desenvolver um software para solucionar o problema apresentado acima. O objetivo geral deve resumir e apresentar a ideia central de um trabalho, descrevendo também a sua finalidade. Os objetivos específicos darão uma maior delimitação ao tema, além de detalhar os processos necessários para a realização do trabalho.
+### Objetivo geral
+
+Desenvolver um sistema web denominado Controla Certo, com o objetivo de auxiliar empresas no controle e organização de suas movimentações financeiras, contribuindo para uma gestão financeira mais clara e estruturada.
+
+### Objetivos específicos
+
+- Disponibilizar um ambiente digital para registro de movimentações financeiras.
+- Permitir o acompanhamento de receitas e despesas empresariais.
+- Organizar as informações financeiras de forma estruturada e acessível.
+- Possibilitar a visualização das movimentações financeiras registradas no sistema.
+- Contribuir para uma melhor organização das informações relacionadas à gestão financeira empresarial.
 
 ## 1.3. Justificativa
 
-Descreva a importância ou a motivação para trabalhar com esta aplicação que você escolheu. Indique as razões pelas quais você escolheu seus objetivos específicos ou as razões para aprofundar em certos aspectos do software.
+A organização adequada das informações financeiras é um fator essencial para a gestão eficiente de empresas. Um controle financeiro estruturado permite que gestores compreendam melhor a situação econômica do negócio, identifiquem padrões de receitas e despesas e realizem planejamentos mais consistentes.
+
+Apesar dessa importância, muitas empresas ainda enfrentam dificuldades para manter esse controle de forma organizada, seja pela utilização de ferramentas inadequadas ou pela ausência de sistemas específicos para esse tipo de gerenciamento. Nesse contexto, o desenvolvimento de aplicações voltadas para o controle financeiro pode contribuir para facilitar o registro e acompanhamento das informações relacionadas às atividades econômicas de uma empresa.
+
+Além disso, o desenvolvimento deste projeto possui também caráter acadêmico, permitindo a aplicação prática de conhecimentos adquiridos ao longo do curso de Sistemas de Informação, especialmente nas áreas de análise de problemas, desenvolvimento de software e organização de sistemas computacionais.
 
 ## 1.4. Público alvo
 
-Descreva quem serão as pessoas que usarão a sua aplicação indicando os diferentes perfis. O objetivo aqui não é definir quem serão os clientes ou quais serão os papéis dos usuários na aplicação. A ideia é, dentro do possível, conhecer um pouco mais sobre o perfil dos usuários: conhecimentos prévios, relação com a tecnologia, relações hierárquicas, etc.
+O público-alvo da aplicação é composto principalmente por proprietários de pequenas e médias empresas, gestores administrativos e profissionais responsáveis pelo controle financeiro das organizações.
+
+Esses usuários geralmente precisam acompanhar receitas, despesas e demais movimentações financeiras do negócio com frequência, sendo responsáveis por registrar informações relacionadas às atividades financeiras da empresa. Em muitos casos, possuem conhecimentos básicos de informática e utilizam ferramentas digitais no dia a dia, porém podem não possuir formação técnica na área de tecnologia da informação.
+
+Dessa forma, torna-se importante que a aplicação apresente uma interface simples e intuitiva, permitindo que usuários com diferentes níveis de familiaridade com tecnologia consigam utilizar o sistema de maneira eficiente para registrar e acompanhar informações financeiras relacionadas às atividades da empresa.
