@@ -8,6 +8,8 @@
     --white: #DBE8FF;
     --muted: rgba(169, 200, 255, 0.5);
     --blue-text: #A9C8FF;
+    --bg-secondary: #1C222D;
+    --bg-input: #374152;
     --font: 'Nunito', sans-serif;
 }
 
@@ -34,12 +36,13 @@ body {
     background: var(--bg-header);
     position: sticky;
     top: 0;
-    z-index: 100;
+    z-index: 99;
 }
 
 .navbar {
     padding: 0;
     background: transparent;
+    z-index: 99;
 }
 
 .nav-container {
@@ -50,7 +53,7 @@ body {
 }
 
 .nav-logo {
-    height: 80px;
+    height: 64px;
     width: auto;
 }
 
@@ -163,4 +166,18 @@ body {
         padding: 16px 0 24px;
         gap: 16px;
     }
+}
+
+/* Estilo input */
+
+.form-control {
+    background-color: var(--bg-input);
+    border: none;
+    border-radius: 10px;
+    padding-block: .75em;
+}
+
+.form-control:focus {
+    border: 2px solid transparent;
+    background-color: var(--muted);
 }
