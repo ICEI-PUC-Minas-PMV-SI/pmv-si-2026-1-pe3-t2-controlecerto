@@ -1,0 +1,99 @@
+/* ---- Sobre ---- */
+.sobre {
+    min-height: calc(100vh - 103px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.sobre-container {
+    padding: 40px 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 80px;
+}
+
+.sobre-logo {
+    flex-shrink: 0;
+}
+
+.sobre-circle {
+    width: 360px;
+    height: 360px;
+    border-radius: 50%;
+    background: radial-gradient(circle at 40% 35%, #1a3a2a 0%, #0e1e2e 60%, #0b1520 100%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+}
+
+.circle-icon {
+    width: 55%;
+    height: auto;
+}
+
+.circle-brand {
+    font-size: 28px;
+    font-weight: 400;
+    color: var(--blue-text);
+    letter-spacing: -0.01em;
+}
+
+.circle-brand strong {
+    font-weight: 800;
+    color: var(--green);
+}
+
+.sobre-text {
+    max-width: 620px;
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+}
+
+.sobre-text p {
+    font-size: clamp(15px, 1.3vw, 18px);
+    line-height: 1.75;
+    color: var(--white);
+    opacity: 0.9;
+}
+
+/* Responsivo */
+@media (max-width: 991px) {
+    .sobre-container {
+        flex-direction: column;
+        padding: 48px 24px;
+        gap: 40px;
+    }
+
+    .sobre-circle {
+        width: 280px;
+        height: 280px;
+    }
+
+    .circle-brand {
+        font-size: 22px;
+    }
+
+    .sobre-text {
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 575px) {
+    .sobre-circle {
+        width: 220px;
+        height: 220px;
+    }
+
+    .circle-brand {
+        font-size: 18px;
+    }
+
+    .sobre-text p {
+        font-size: 15px;
+    }
+}
