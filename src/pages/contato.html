@@ -4,11 +4,11 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Sobre Nós – ControleCerto</title>
+    <title>Contato – ControleCerto</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700;800&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="../styles/base.css" />
-    <link rel="stylesheet" href="../styles/sobre.css" />
+    <link rel="stylesheet" href="../styles/contato.css" />
 </head>
 
 <body>
@@ -29,8 +29,8 @@
                 <div class="collapse navbar-collapse" id="navMenu">
                     <ul class="navbar-nav me-auto nav-links">
                         <li class="nav-item"><a href="index.html" class="nav-link">Início</a></li>
-                        <li class="nav-item"><a href="sobre.html" class="nav-link active">Sobre</a></li>
-                        <li class="nav-item"><a href="contato.html" class="nav-link">Contato</a></li>
+                        <li class="nav-item"><a href="sobre.html" class="nav-link">Sobre</a></li>
+                        <li class="nav-item"><a href="contato.html" class="nav-link active">Contato</a></li>
                     </ul>
                     <div class="nav-actions">
                         <a href="#" class="btn-start">Começar</a>
@@ -43,33 +43,42 @@
         <div class="divider-line"></div>
     </header>
 
-    <!-- Sobre Nós -->
-    <section class="sobre">
-        <div class="container-fluid sobre-container">
+    <!-- Formulário -->
+    <section class="contato">
+        <h2 class="contato-titulo">Fale Conosco</h2>
 
-            <div class="sobre-logo">
-                <div class="sobre-circle">
-                    <img src="../assets/imgs/logo_sobre.png" alt="Ícone ControleCerto" class="circle-icon" />
-                </div>
-            </div>
+        <div class="contato-form">
+            <select class="campo-select">
+                <option value="" disabled selected>Assunto</option>
+                <option value="suporte">Suporte</option>
+                <option value="comercial">Comercial</option>
+                <option value="financeiro">Financeiro</option>
+                <option value="outro">Outro</option>
+            </select>
 
-            <div class="sobre-text">
-                <p>
-                    O Controle Certo é uma plataforma desenvolvida para simplificar a gestão
-                    financeira de empresas. Nosso objetivo é ajudar pequenos e médios negócios
-                    a organizarem receitas, despesas e fluxo de caixa de forma prática, clara e
-                    acessível.
-                </p>
-                <p>
-                    A ferramenta centraliza informações financeiras em um único ambiente,
-                    facilitando o acompanhamento das movimentações e apoiando uma gestão
-                    mais organizada e eficiente. Tudo isso por meio de uma interface simples e
-                    intuitiva, pensada para usuários de todos os níveis de experiência.
-                </p>
-            </div>
+            <textarea class="campo-textarea" placeholder="Mensagem" rows="8"></textarea>
 
+            <button class="btn-enviar">Enviar</button>
         </div>
     </section>
+
+    <!-- Rodapé -->
+    <div class="divider-line"></div>
+
+    <footer class="rodape">
+        <div class="rodape-container">
+            <div class="rodape-slogan">
+                <h3>
+                    O <strong>ControleCerto</strong> é o
+                    <span class="highlight">certo</span>
+                    para você e a sua empresa.
+                </h3>
+            </div>
+            <div class="rodape-desc">
+                <p>O software financeiro completo para empresas que querem performance e controle real.</p>
+            </div>
+        </div>
+    </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="../scripts/script.js"></script>
