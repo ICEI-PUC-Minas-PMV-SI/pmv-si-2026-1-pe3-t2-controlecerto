@@ -1,0 +1,226 @@
+/* ---- Relatórios ---- */
+
+.reports-toolbar {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 16px;
+    margin-top: 28px;
+    margin-bottom: 28px;
+}
+
+.reports-toolbar__select {
+    appearance: none;
+    min-width: 160px;
+    padding: 12px 40px 12px 18px;
+    font-family: var(--font);
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--white);
+    background: var(--bg-input) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath fill='%23A9C8FF' d='M1 1l5 5 5-5'/%3E%3C/svg%3E") no-repeat right 16px center;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+}
+
+.reports-toolbar__select--wide {
+    min-width: 220px;
+    flex: 1;
+    max-width: 320px;
+}
+
+.reports-toolbar__export {
+    margin-left: auto;
+    font-family: var(--font);
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--green-text);
+    text-decoration: none;
+    padding: 11px 24px;
+    border: 1.5px solid var(--green);
+    border-radius: 12px;
+    background: transparent;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.reports-toolbar__export:hover {
+    background: rgba(65, 167, 75, 0.12);
+    color: var(--white);
+}
+
+.reports-summary {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+    margin-bottom: 28px;
+}
+
+.reports-summary .finance-card {
+    padding: 22px 24px;
+    min-height: 0;
+}
+
+.reports-summary .finance-card__value {
+    font-size: 26px;
+    margin-bottom: 0;
+}
+
+.reports-summary .finance-card__label {
+    margin-bottom: 10px;
+}
+
+.finance-card__value--balance {
+    color: var(--green-text);
+}
+
+.finance-card__value--category {
+    font-size: 22px;
+    color: var(--blue-text);
+}
+
+.reports-chart-card {
+    margin-bottom: 28px;
+}
+
+.reports-chart-card .finance-card__label {
+    margin-bottom: 20px;
+}
+
+.reports-chart-card .finance-card__chart {
+    min-height: 220px;
+    align-items: center;
+}
+
+.chart-dual-line {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.chart-dual-line__path--revenue {
+    fill: none;
+    stroke: var(--green);
+    stroke-width: 3;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+.chart-dual-line__path--expense {
+    fill: none;
+    stroke: var(--expense-color);
+    stroke-width: 3;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+.chart-dual-line__label {
+    font-family: var(--font);
+    font-size: 11px;
+    font-weight: 700;
+    fill: var(--chart-axis);
+}
+
+.reports-table .panel-table__table thead th,
+.reports-table .panel-table__table tbody td {
+    text-align: left;
+}
+
+.reports-table .panel-table__table thead th:last-child,
+.reports-table .panel-table__table tbody td:last-child {
+    text-align: left;
+    width: auto;
+}
+
+.text-revenue {
+    color: var(--green-text);
+}
+
+.text-expense {
+    color: var(--expense-color);
+}
+
+.text-status {
+    color: var(--green-text);
+    font-weight: 800;
+}
+
+.panel-table {
+    background: var(--card-bg);
+    border-radius: 16px;
+    overflow: hidden;
+}
+
+.panel-table__table {
+    width: 100%;
+    border-collapse: collapse;
+    font-family: var(--font);
+}
+
+.panel-table__table thead th {
+    padding: 20px 24px;
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--muted);
+    text-align: left;
+    border-bottom: 1px solid rgba(169, 200, 255, 0.08);
+}
+
+.panel-table__table tbody td {
+    padding: 18px 24px;
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--white);
+    vertical-align: middle;
+}
+
+.panel-table__table tbody tr:nth-child(even) {
+    background: rgba(55, 65, 82, 0.35);
+}
+
+@media (max-width: 1199px) {
+    .reports-summary {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .reports-summary .finance-card__value {
+        font-size: 22px;
+    }
+}
+
+@media (max-width: 991px) {
+    .reports-toolbar__export {
+        margin-left: 0;
+        width: 100%;
+        text-align: center;
+    }
+
+    .reports-toolbar__select--wide {
+        max-width: 100%;
+    }
+
+    .reports-summary {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+
+    .panel-table {
+        overflow-x: auto;
+    }
+
+    .panel-table__table {
+        min-width: 560px;
+    }
+}
+
+@media (max-width: 575px) {
+    .reports-toolbar {
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+
+    .reports-toolbar__select {
+        width: 100%;
+        min-width: 0;
+    }
+}

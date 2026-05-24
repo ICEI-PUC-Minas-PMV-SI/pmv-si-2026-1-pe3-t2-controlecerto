@@ -1,0 +1,143 @@
+/* ---- Receitas ---- */
+
+.page-content {
+    margin-top: 32px;
+}
+
+.panel-table {
+    background: var(--card-bg);
+    border-radius: 16px;
+    overflow: hidden;
+}
+
+.panel-table__table {
+    width: 100%;
+    border-collapse: collapse;
+    font-family: var(--font);
+}
+
+.panel-table__table thead th {
+    padding: 20px 24px;
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--muted);
+    text-align: left;
+    border-bottom: 1px solid rgba(169, 200, 255, 0.08);
+}
+
+.panel-table__table thead th:last-child {
+    width: 120px;
+    text-align: right;
+}
+
+.panel-table__table tbody td {
+    padding: 18px 24px;
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--white);
+    vertical-align: middle;
+}
+
+.panel-table__table tbody tr:nth-child(even) {
+    background: rgba(55, 65, 82, 0.35);
+}
+
+.panel-table__table tbody td:last-child {
+    text-align: right;
+}
+
+.row-actions {
+    display: inline-flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 10px;
+}
+
+.btn-action {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    border: 1.5px solid var(--green);
+    background: var(--bg-input);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    padding: 0;
+    transition: opacity 0.2s;
+}
+
+.btn-action:hover {
+    opacity: 0.85;
+}
+
+.btn-action--edit {
+    color: #E8C547;
+    font-size: 16px;
+}
+
+.btn-action--delete {
+    color: #E8887D;
+    font-size: 16px;
+}
+
+.fab {
+    position: fixed;
+    right: 48px;
+    bottom: 48px;
+    z-index: 50;
+    width: 56px;
+    height: 56px;
+    border: none;
+    border-radius: 14px;
+    background: var(--green);
+    color: var(--white);
+    font-size: 28px;
+    font-weight: 700;
+    line-height: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: 0 8px 24px rgba(65, 167, 75, 0.35);
+    transition: background 0.2s, transform 0.2s;
+}
+
+.fab:hover {
+    background: #4bb855;
+    transform: scale(1.04);
+}
+
+.fab i {
+    font-size: 26px;
+    font-weight: 700;
+}
+
+@media (max-width: 1199px) {
+    .page-content {
+        margin-top: 24px;
+    }
+}
+
+@media (max-width: 991px) {
+    .fab {
+        right: 20px;
+        bottom: 24px;
+    }
+
+    .panel-table {
+        overflow-x: auto;
+    }
+
+    .panel-table__table {
+        min-width: 640px;
+    }
+}
+
+@media (max-width: 575px) {
+    .panel-table__table thead th,
+    .panel-table__table tbody td {
+        padding: 14px 16px;
+        font-size: 13px;
+    }
+}

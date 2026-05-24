@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Visão Geral — ControleCerto</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="../../styles/base.css" />
+    <link rel="stylesheet" href="../../styles/components.css" />
+    <link rel="stylesheet" href="../../styles/dashboard.css" />
+</head>
+
+<body>
+    <div class="app-shell">
+        <aside class="sidebar" aria-label="Menu principal">
+            <div class="sidebar__brand">
+                <img src="../../assets/imgs/logo.png" alt="ControleCerto" class="sidebar__logo" />
+            </div>
+            <hr class="sidebar__divider" />
+
+            <nav class="sidebar__nav" aria-label="Navegação do painel">
+                <ul class="sidebar__menu">
+                    <li>
+                        <a href="dashboard.html" class="sidebar__link sidebar__link--active" aria-current="page">
+                            <svg class="sidebar__icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                viewBox="0 0 16 16" fill="none" aria-hidden="true">
+                                <path
+                                    d="M6 2H2.66667C2.29848 2 2 2.29848 2 2.66667V7.33333C2 7.70152 2.29848 8 2.66667 8H6C6.36819 8 6.66667 7.70152 6.66667 7.33333V2.66667C6.66667 2.29848 6.36819 2 6 2Z"
+                                    stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                                <path
+                                    d="M13.3333 2H10C9.63181 2 9.33333 2.29848 9.33333 2.66667V4.66667C9.33333 5.03486 9.63181 5.33333 10 5.33333H13.3333C13.7015 5.33333 14 5.03486 14 4.66667V2.66667C14 2.29848 13.7015 2 13.3333 2Z"
+                                    stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                                <path
+                                    d="M13.3333 8H10C9.63181 8 9.33333 8.29848 9.33333 8.66667V13.3333C9.33333 13.7015 9.63181 14 10 14H13.3333C13.7015 14 14 13.7015 14 13.3333V8.66667C14 8.29848 13.7015 8 13.3333 8Z"
+                                    stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                                <path
+                                    d="M6 10.6667H2.66667C2.29848 10.6667 2 10.9651 2 11.3333V13.3333C2 13.7015 2.29848 14 2.66667 14H6C6.36819 14 6.66667 13.7015 6.66667 13.3333V11.3333C6.66667 10.9651 6.36819 10.6667 6 10.6667Z"
+                                    stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                            </svg>
+                            <span>Visão Geral</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="receitas.html" class="sidebar__link">
+                            <svg class="sidebar__icon" xmlns="http://www.w3.org/2000/svg" width="16" height="17"
+                                viewBox="0 0 16 17" fill="none" aria-hidden="true">
+                                <path
+                                    d="M8 12.75H2.66667C2.31305 12.75 1.97391 12.6007 1.72386 12.3351C1.47381 12.0694 1.33333 11.7091 1.33333 11.3333V5.66667C1.33333 5.29094 1.47381 4.93061 1.72386 4.66493C1.97391 4.39926 2.31305 4.25 2.66667 4.25H13.3333C13.687 4.25 14.0261 4.39926 14.2761 4.66493C14.5262 4.93061 14.6667 5.29094 14.6667 5.66667V9.20833M12 8.5H12.0067M12.6667 15.5833V11.3333M10.6667 13.4583L12.6667 11.3333L14.6667 13.4583M4 8.5H4.00667M9.33333 8.5C9.33333 9.2824 8.73638 9.91667 8 9.91667C7.26362 9.91667 6.66667 9.2824 6.66667 8.5C6.66667 7.7176 7.26362 7.08333 8 7.08333C8.73638 7.08333 9.33333 7.7176 9.33333 8.5Z"
+                                    stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                            </svg>
+                            <span>Receitas</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="despesas.html" class="sidebar__link">
+                            <svg class="sidebar__icon" xmlns="http://www.w3.org/2000/svg" width="16" height="17"
+                                viewBox="0 0 16 17" fill="none" aria-hidden="true">
+                                <path
+                                    d="M8 12.75H2.66667C2.31305 12.75 1.97391 12.6007 1.72386 12.3351C1.47381 12.0694 1.33333 11.7091 1.33333 11.3333V5.66667C1.33333 5.29094 1.47381 4.93061 1.72386 4.66493C1.97391 4.39926 2.31305 4.25 2.66667 4.25H13.3333C13.687 4.25 14.0261 4.39926 14.2761 4.66493C14.5262 4.93061 14.6667 5.29094 14.6667 5.66667V9.20833M14.6667 13.4583L12.6667 15.5833L10.6667 13.4583M12.6667 15.5833V11.3333M12 8.5H12.0067M4 8.5H4.00667M9.33333 8.5C9.33333 9.2824 8.73638 9.91667 8 9.91667C7.26362 9.91667 6.66667 9.2824 6.66667 8.5C6.66667 7.7176 7.26362 7.08333 8 7.08333C8.73638 7.08333 9.33333 7.7176 9.33333 8.5Z"
+                                    stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                            </svg>
+                            <span>Despesas</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="relatorios.html" class="sidebar__link">
+                            <svg class="sidebar__icon" xmlns="http://www.w3.org/2000/svg" width="16" height="17"
+                                viewBox="0 0 16 17" fill="none" aria-hidden="true">
+                                <path
+                                    d="M2 2.125V13.4583C2 13.8341 2.14048 14.1944 2.39052 14.4601C2.64057 14.7257 2.97971 14.875 3.33333 14.875H14M5.33333 9.20833H10C10.3682 9.20833 10.6667 9.52546 10.6667 9.91667V11.3333C10.6667 11.7245 10.3682 12.0417 10 12.0417H5.33333C4.96514 12.0417 4.66667 11.7245 4.66667 11.3333V9.91667C4.66667 9.52546 4.96514 9.20833 5.33333 9.20833ZM5.33333 3.54167H12C12.3682 3.54167 12.6667 3.8588 12.6667 4.25V5.66667C12.6667 6.05787 12.3682 6.375 12 6.375H5.33333C4.96514 6.375 4.66667 6.05787 4.66667 5.66667V4.25C4.66667 3.8588 4.96514 3.54167 5.33333 3.54167Z"
+                                    stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                            </svg>
+                            <span>Relatórios</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="administracao.html" class="sidebar__link">
+                            <svg class="sidebar__icon" xmlns="http://www.w3.org/2000/svg" width="16" height="17"
+                                viewBox="0 0 16 17" fill="none" aria-hidden="true">
+                                <path
+                                    d="M6.66667 15.5833V10.9295M8 7.79166H8.00667M8 4.95832H8.00667M9.33333 10.9295V15.5833M10 11.3333C9.42301 10.8735 8.72123 10.625 8 10.625C7.27877 10.625 6.57699 10.8735 6 11.3333M10.6667 7.79166H10.6733M10.6667 4.95832H10.6733M5.33333 7.79166H5.34M5.33333 4.95832H5.34M4 1.41666H12C12.7364 1.41666 13.3333 2.05092 13.3333 2.83332V14.1667C13.3333 14.9491 12.7364 15.5833 12 15.5833H4C3.26362 15.5833 2.66667 14.9491 2.66667 14.1667V2.83332C2.66667 2.05092 3.26362 1.41666 4 1.41666Z"
+                                    stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                            </svg>
+                            <span>Administração</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+
+            <footer class="sidebar__footer">
+                <hr class="sidebar__divider" />
+                <div class="sidebar__user">
+                    <div class="sidebar__avatar" aria-hidden="true">
+                        <i class="bi bi-person-fill"></i>
+                    </div>
+                    <div class="sidebar__user-info">
+                        <span class="sidebar__user-name">João</span>
+                        <span class="sidebar__user-role">Administrador</span>
+                    </div>
+                </div>
+            </footer>
+        </aside>
+
+        <main class="main-content">
+            <header class="page-header">
+                <h1 class="page-header__title">Visão Geral</h1>
+            </header>
+
+            <section class="dashboard-overview__grid" aria-label="Resumo financeiro do semestre">
+                <article class="finance-card finance-card--revenue">
+                    <h2 class="finance-card__label">Receitas</h2>
+                    <p class="finance-card__value finance-card__value--revenue">R$ 8.548,56</p>
+                    <p class="finance-card__subtitle">Último semestre</p>
+                    <div class="finance-card__chart">
+                        <svg class="chart-bars" viewBox="0 0 480 180" role="img"
+                            aria-label="Gráfico de barras das receitas de janeiro a junho">
+                            <rect class="chart-bars__bar" x="24" y="78" width="48" height="82" rx="8" />
+                            <rect class="chart-bars__bar" x="104" y="62" width="48" height="98" rx="8" />
+                            <rect class="chart-bars__bar" x="184" y="54" width="48" height="106" rx="8" />
+                            <rect class="chart-bars__bar" x="264" y="46" width="48" height="114" rx="8" />
+                            <rect class="chart-bars__bar" x="344" y="38" width="48" height="122" rx="8" />
+                            <rect class="chart-bars__bar" x="424" y="30" width="48" height="130" rx="8" />
+                            <text class="chart-bars__label" x="48" y="172" text-anchor="middle">Jan</text>
+                            <text class="chart-bars__label" x="128" y="172" text-anchor="middle">Fev</text>
+                            <text class="chart-bars__label" x="208" y="172" text-anchor="middle">Mar</text>
+                            <text class="chart-bars__label" x="288" y="172" text-anchor="middle">Abr</text>
+                            <text class="chart-bars__label" x="368" y="172" text-anchor="middle">Mai</text>
+                            <text class="chart-bars__label" x="448" y="172" text-anchor="middle">Jun</text>
+                        </svg>
+                    </div>
+                </article>
+
+                <article class="finance-card finance-card--expense">
+                    <h2 class="finance-card__label">Despesas</h2>
+                    <p class="finance-card__value finance-card__value--expense">R$ 2.548,56</p>
+                    <p class="finance-card__subtitle">Média do ultimo semestre</p>
+                    <div class="finance-card__chart">
+                        <svg class="chart-line" viewBox="0 0 480 180" role="img"
+                            aria-label="Gráfico de linha das despesas de janeiro a junho">
+                            <path class="chart-line__path"
+                                d="M 48 98 L 128 82 L 208 90 L 288 68 L 368 76 L 448 58" />
+                            <text class="chart-line__label" x="48" y="172" text-anchor="middle">Jan</text>
+                            <text class="chart-line__label" x="128" y="172" text-anchor="middle">Fev</text>
+                            <text class="chart-line__label" x="208" y="172" text-anchor="middle">Mar</text>
+                            <text class="chart-line__label" x="288" y="172" text-anchor="middle">Abr</text>
+                            <text class="chart-line__label" x="368" y="172" text-anchor="middle">Mai</text>
+                            <text class="chart-line__label" x="448" y="172" text-anchor="middle">Jun</text>
+                        </svg>
+                    </div>
+                </article>
+            </section>
+        </main>
+    </div>
+</body>
+
+</html>
