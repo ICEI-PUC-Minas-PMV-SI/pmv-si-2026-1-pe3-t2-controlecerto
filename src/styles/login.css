@@ -3,9 +3,9 @@
     background-color: var(--bg-secondary);
     border: 2px solid transparent;
     border-radius: 1em;
-    background-image: 
-    linear-gradient(var(--bg-secondary), var(--bg-secondary)),
-    linear-gradient(to right, var(--blue), var(--green));
+    background-image:
+        linear-gradient(var(--bg-secondary), var(--bg-secondary)),
+        linear-gradient(to right, var(--blue), var(--green));
     background-origin: border-box;
     background-clip: padding-box, border-box;
     min-width: calc(100vw - 80%);
@@ -46,9 +46,9 @@
     padding: 10px 20px;
     border: 2px solid transparent;
     border-radius: 1em;
-    background-image: 
-    linear-gradient(var(--bg-secondary), var(--bg-secondary)),
-    linear-gradient(to right, var(--blue), var(--green));
+    background-image:
+        linear-gradient(var(--bg-secondary), var(--bg-secondary)),
+        linear-gradient(to right, var(--blue), var(--green));
     background-origin: border-box;
     background-clip: padding-box, border-box;
     transition: background 0.2s;
