@@ -30,11 +30,3 @@ function fazerLogout() {
     localStorage.removeItem('logado');
     window.location.href = 'login.html';
 }
-
-//Cria automaticamente um usuário com os dados abaixo
-document.addEventListener('DOMContentLoaded', () => {
-    localStorage.setItem('usuario', JSON.stringify({
-        email: 'admin@gmail.com',
-        senha: '123'
-    }));
-});
