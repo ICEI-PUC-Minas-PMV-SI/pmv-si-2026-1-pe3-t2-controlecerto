@@ -64,5 +64,36 @@ const DB = {
 
     getSaldo() {
         return this.getTotalReceitas() - this.getTotalDespesas();
+    },
+
+    // --- Usuários ---
+
+    getUsuarios() {
+        return JSON.parse(localStorage.getItem('usuarios') || '[]');
+    },
+
+    salvarUsuario(usuario) {
+        const lista = this.getUsuarios();
+        const emailExiste = lista.some(u => u.email === usuario.email);
+        if (emailExiste) return { erro: 'Este e-mail já está cadastrado.' };
+        usuario.id = Date.now();
+        lista.push(usuario);
+        localStorage.setItem('usuarios', JSON.stringify(lista));
+        return { ok: true };
+    },
+
+    editarUsuario(id, dados) {
+        const lista = this.getUsuarios();
+        const emailDuplicado = lista.some(u => u.email === dados.email && u.id !== id);
+        if (emailDuplicado) return { erro: 'Este e-mail já está em uso.' };
+        const atualizada = lista.map(u => u.id === id ? { ...u, ...dados } : u);
+        localStorage.setItem('usuarios', JSON.stringify(atualizada));
+        return { ok: true };
+    },
+
+    removerUsuario(id) {
+        const lista = this.getUsuarios().filter(u => u.id !== id);
+        localStorage.setItem('usuarios', JSON.stringify(lista));
     }
+
 };

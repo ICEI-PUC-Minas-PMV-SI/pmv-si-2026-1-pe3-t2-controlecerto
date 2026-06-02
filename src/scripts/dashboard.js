@@ -4,7 +4,6 @@ function formatarValor(valor) {
     return Number(valor).toLocaleString('pt-BR', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
 }
 
-// Agrupa os valores por mês (retorna array de 12 posições)
 function agruparPorMes(lista) {
     const totais = new Array(12).fill(0);
     lista.forEach(item => {
@@ -15,21 +14,18 @@ function agruparPorMes(lista) {
     return totais;
 }
 
-// Filtra apenas os meses que têm dados e retorna no máximo 6
 function mesesComDados(totais) {
     const indices = totais
         .map((v, i) => ({ mes: i, valor: v }))
         .filter(x => x.valor > 0);
 
-    // Se tiver menos de 2, mostra os 6 primeiros mesmo assim
     if (indices.length < 2) {
         return [0, 1, 2, 3, 4, 5].map(i => ({ mes: i, valor: totais[i] }));
     }
 
-    return indices.slice(-6); // últimos 6 meses com dados
+    return indices.slice(-6);
 }
 
-// Gera o gráfico de barras das receitas
 function renderizarBarras(svgEl, dados) {
     const max = Math.max(...dados.map(d => d.valor), 1);
     const svgH = 160;
@@ -50,12 +46,11 @@ function renderizarBarras(svgEl, dados) {
     }).join('');
 }
 
-// Gera o gráfico de linha das despesas
 function renderizarLinha(svgEl, dados) {
     const max = Math.max(...dados.map(d => d.valor), 1);
     const svgH = 150;
     const gap = 80;
-    const startX = 24 + 24; // centralizado na barra equivalente
+    const startX = 24 + 24;
 
     const pontos = dados.map((d, i) => {
         const x = startX + i * gap;
@@ -72,23 +67,19 @@ function renderizarLinha(svgEl, dados) {
     svgEl.innerHTML = `<path class="chart-line__path" d="${pathD}" />${labels}`;
 }
 
-// Atualiza os totais e gráficos
 function renderizarDashboard() {
     const receitas = DB.getReceitas();
     const despesas = DB.getDespesas();
 
-    // Totais
     document.getElementById('total-receitas').textContent = `R$ ${formatarValor(DB.getTotalReceitas())}`;
     document.getElementById('total-despesas').textContent = `R$ ${formatarValor(DB.getTotalDespesas())}`;
 
-    // Gráficos
     const totaisReceitas = agruparPorMes(receitas);
     const totaisDespesas = agruparPorMes(despesas);
 
     renderizarBarras(document.getElementById('chart-receitas'), mesesComDados(totaisReceitas));
     renderizarLinha(document.getElementById('chart-despesas'), mesesComDados(totaisDespesas));
 
-    // Nome do usuário na sidebar
     const usuario = JSON.parse(localStorage.getItem('usuario') || '{}');
     const nomeEl = document.getElementById('sidebar-username');
     if (nomeEl && usuario.email) {
