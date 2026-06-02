@@ -11,8 +11,6 @@
     <link rel="stylesheet" href="../../styles/base.css" />
     <link rel="stylesheet" href="../../styles/components.css" />
     <link rel="stylesheet" href="../../styles/dashboard.css" />
-    <script src="../scripts/db.js"></script>
-    <script src="../scripts/script.js"></script>
 </head>
 
 <body>
@@ -107,7 +105,7 @@
                         <i class="bi bi-person-fill"></i>
                     </div>
                     <div class="sidebar__user-info">
-                        <span class="sidebar__user-name">João</span>
+                        <span class="sidebar__user-name" id="sidebar-username">—</span>
                         <span class="sidebar__user-role">Administrador</span>
                     </div>
                 </div>
@@ -119,50 +117,37 @@
                 <h1 class="page-header__title">Visão Geral</h1>
             </header>
 
-            <section class="dashboard-overview__grid" aria-label="Resumo financeiro do semestre">
+            <section class="dashboard-overview__grid" aria-label="Resumo financeiro">
                 <article class="finance-card finance-card--revenue">
                     <h2 class="finance-card__label">Receitas</h2>
-                    <p class="finance-card__value finance-card__value--revenue">R$ 8.548,56</p>
-                    <p class="finance-card__subtitle">Último semestre</p>
+                    <p class="finance-card__value finance-card__value--revenue" id="total-receitas">R$ 0,00</p>
+                    <p class="finance-card__subtitle">Total acumulado</p>
                     <div class="finance-card__chart">
-                        <svg class="chart-bars" viewBox="0 0 480 180" role="img"
-                            aria-label="Gráfico de barras das receitas de janeiro a junho">
-                            <rect class="chart-bars__bar" x="24" y="78" width="48" height="82" rx="8" />
-                            <rect class="chart-bars__bar" x="104" y="62" width="48" height="98" rx="8" />
-                            <rect class="chart-bars__bar" x="184" y="54" width="48" height="106" rx="8" />
-                            <rect class="chart-bars__bar" x="264" y="46" width="48" height="114" rx="8" />
-                            <rect class="chart-bars__bar" x="344" y="38" width="48" height="122" rx="8" />
-                            <rect class="chart-bars__bar" x="424" y="30" width="48" height="130" rx="8" />
-                            <text class="chart-bars__label" x="48" y="172" text-anchor="middle">Jan</text>
-                            <text class="chart-bars__label" x="128" y="172" text-anchor="middle">Fev</text>
-                            <text class="chart-bars__label" x="208" y="172" text-anchor="middle">Mar</text>
-                            <text class="chart-bars__label" x="288" y="172" text-anchor="middle">Abr</text>
-                            <text class="chart-bars__label" x="368" y="172" text-anchor="middle">Mai</text>
-                            <text class="chart-bars__label" x="448" y="172" text-anchor="middle">Jun</text>
+                        <svg class="chart-bars" id="chart-receitas" viewBox="0 0 480 180" role="img"
+                            aria-label="Gráfico de barras das receitas por mês">
+                            <!-- preenchido via JS -->
                         </svg>
                     </div>
                 </article>
 
                 <article class="finance-card finance-card--expense">
                     <h2 class="finance-card__label">Despesas</h2>
-                    <p class="finance-card__value finance-card__value--expense">R$ 2.548,56</p>
-                    <p class="finance-card__subtitle">Média do ultimo semestre</p>
+                    <p class="finance-card__value finance-card__value--expense" id="total-despesas">R$ 0,00</p>
+                    <p class="finance-card__subtitle">Total acumulado</p>
                     <div class="finance-card__chart">
-                        <svg class="chart-line" viewBox="0 0 480 180" role="img"
-                            aria-label="Gráfico de linha das despesas de janeiro a junho">
-                            <path class="chart-line__path" d="M 48 98 L 128 82 L 208 90 L 288 68 L 368 76 L 448 58" />
-                            <text class="chart-line__label" x="48" y="172" text-anchor="middle">Jan</text>
-                            <text class="chart-line__label" x="128" y="172" text-anchor="middle">Fev</text>
-                            <text class="chart-line__label" x="208" y="172" text-anchor="middle">Mar</text>
-                            <text class="chart-line__label" x="288" y="172" text-anchor="middle">Abr</text>
-                            <text class="chart-line__label" x="368" y="172" text-anchor="middle">Mai</text>
-                            <text class="chart-line__label" x="448" y="172" text-anchor="middle">Jun</text>
+                        <svg class="chart-line" id="chart-despesas" viewBox="0 0 480 180" role="img"
+                            aria-label="Gráfico de linha das despesas por mês" overflow="visible">
+                            <!-- preenchido via JS -->
                         </svg>
                     </div>
                 </article>
             </section>
         </main>
     </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../../scripts/db.js"></script>
+    <script src="../../scripts/dashboard.js"></script>
 </body>
 
 </html>
