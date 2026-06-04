@@ -120,10 +120,6 @@ document.getElementById('btn-confirmar-exclusao').addEventListener('click', () =
     renderizarTabela();
 });
 
-const usuario = JSON.parse(localStorage.getItem('usuario') || '{}');
-const nomeEl = document.getElementById('sidebar-username');
-if (nomeEl && usuario.email) {
-    nomeEl.textContent = usuario.email.split('@')[0];
-}
+// Sidebar preenchida pelo auth.js
 
 renderizarTabela();

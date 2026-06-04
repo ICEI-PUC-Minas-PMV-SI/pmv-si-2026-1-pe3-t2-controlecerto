@@ -80,11 +80,7 @@ function renderizarDashboard() {
     renderizarBarras(document.getElementById('chart-receitas'), mesesComDados(totaisReceitas));
     renderizarLinha(document.getElementById('chart-despesas'), mesesComDados(totaisDespesas));
 
-    const usuario = JSON.parse(localStorage.getItem('usuario') || '{}');
-    const nomeEl = document.getElementById('sidebar-username');
-    if (nomeEl && usuario.email) {
-        nomeEl.textContent = usuario.email.split('@')[0];
-    }
+    // Sidebar preenchida pelo auth.js
 }
 
 renderizarDashboard();
