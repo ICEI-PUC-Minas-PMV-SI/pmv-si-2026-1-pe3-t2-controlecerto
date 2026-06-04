@@ -26,8 +26,8 @@ function fazerLogin() {
     }
 
     const logado = admin
-        ? { email: admin.email, nome: admin.nome || admin.email.split('@')[0], cargo: 'Administrador', empresaId: admin.empresaId }
-        : { email: funcionario.email, nome: funcionario.nome, cargo: funcionario.cargo, empresaId: funcionario.empresaId };
+        ? { empresa: admin.empresa, email: admin.email, nome: admin.nome || admin.email.split('@')[0], cargo: 'Administrador', empresaId: admin.empresaId }
+        : { empresa: funcionario.empresa, email: funcionario.email, nome: funcionario.nome, cargo: funcionario.cargo, empresaId: funcionario.empresaId };
 
     localStorage.setItem('logado', 'true');
     localStorage.setItem('usuarioLogado', JSON.stringify(logado));

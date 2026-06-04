@@ -7,6 +7,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const contaDemo = {
         id: 1,
         empresaId,
+        empresa: 'Controle Certo',
         email: 'admin@gmail.com',
         senha: '123',
         nome: 'Admin',

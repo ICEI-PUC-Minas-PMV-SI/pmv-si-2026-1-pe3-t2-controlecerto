@@ -16,9 +16,11 @@
     // Preenche sidebar ao carregar o DOM
     document.addEventListener('DOMContentLoaded', () => {
         const nomeEl = document.getElementById('sidebar-username');
+        const empresaEl = document.getElementById('sidebar-empresa');
         const cargoEl = document.getElementById('sidebar-cargo');
 
         if (nomeEl) nomeEl.textContent = usuarioLogado.nome || '—';
+        if (empresaEl) empresaEl.textContent = usuarioLogado.empresa || '—';
         if (cargoEl) cargoEl.textContent = usuarioLogado.cargo || '—';
 
         // Esconde o item Administração para Funcionários

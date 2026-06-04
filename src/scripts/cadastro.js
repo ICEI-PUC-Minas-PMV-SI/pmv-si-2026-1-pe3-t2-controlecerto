@@ -1,11 +1,12 @@
 function fazerCadastro() {
+    const empresa = document.getElementById('empresa').value.trim();
     const nome = document.getElementById('nome').value.trim();
     const email = document.getElementById('email').value.trim();
     const senha = document.getElementById('senha').value;
     const conf = document.getElementById('confirmar-senha').value;
     const erro = document.getElementById('erro');
 
-    if (!nome || !email || !senha || !conf) {
+    if (!empresa || !nome || !email || !senha || !conf) {
         erro.textContent = 'Preencha todos os campos.';
         return;
     }
@@ -20,7 +21,7 @@ function fazerCadastro() {
         return;
     }
 
-    const resultado = DB.salvarConta({ nome, email, senha });
+    const resultado = DB.salvarConta({ empresa, nome, email, senha });
 
     if (resultado.erro) {
         erro.textContent = resultado.erro;

@@ -157,6 +157,13 @@
     line-height: 1.2;
 }
 
+.sidebar__user-empresa {
+    font-size: 12px;
+    font-weight: 750;
+    color: rgb(169, 201, 255);
+    line-height: 1.2;
+}
+
 .sidebar__user-role {
     font-size: 12px;
     font-weight: 700;
