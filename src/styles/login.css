@@ -59,7 +59,14 @@
     color: var(--muted);
     text-decoration: none;
     font-weight: bold;
-    padding-block: 1em;
+}
+
+.btn-cadastro {
+    text-align: start;
+    color: var(--green-text);
+    text-decoration: none;
+    font-weight: bold;
+    transition: opacity 0.2s ease;
 }
 
 .esqueci-senha-link {
