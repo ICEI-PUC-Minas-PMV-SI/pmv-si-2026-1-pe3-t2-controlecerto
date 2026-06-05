@@ -3,8 +3,9 @@ function fazerLogin() {
     const senhaDigitada = document.getElementById('password').value;
     const erro = document.getElementById('erro');
 
-    // Busca entre os administradores cadastrados
     const contas = JSON.parse(localStorage.getItem('contas') || '[]');
+
+    // Busca entre os administradores
     const admin = contas.find(c => c.email === emailDigitado && c.senha === senhaDigitada);
 
     // Busca entre os funcionários de todas as empresas
@@ -25,9 +26,24 @@ function fazerLogin() {
         return;
     }
 
-    const logado = admin
-        ? { empresa: admin.empresa, email: admin.email, nome: admin.nome || admin.email.split('@')[0], cargo: 'Administrador', empresaId: admin.empresaId }
-        : { empresa: funcionario.empresa, email: funcionario.email, nome: funcionario.nome, cargo: funcionario.cargo, empresaId: funcionario.empresaId };
+    let logado;
+    if (admin) {
+        logado = {
+            email: admin.email,
+            nome: admin.nome || admin.email.split('@')[0],
+            cargo: 'Administrador',
+            empresaId: admin.empresaId,
+            empresa: admin.empresa || admin.nome || admin.email.split('@')[0]
+        };
+    } else {
+        logado = {
+            email: funcionario.email,
+            nome: funcionario.nome,
+            cargo: funcionario.cargo,
+            empresaId: funcionario.empresaId,
+            empresa: funcionario.empresa || '—'
+        };
+    }
 
     localStorage.setItem('logado', 'true');
     localStorage.setItem('usuarioLogado', JSON.stringify(logado));

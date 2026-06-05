@@ -1,9 +1,15 @@
 const DB = {
 
-    // Retorna o empresaId do usuário logado
     getEmpresaId() {
         const u = JSON.parse(localStorage.getItem('usuarioLogado') || '{}');
         return u.empresaId || null;
+    },
+
+    getNomeEmpresa(empresaId) {
+        const id = empresaId || this.getEmpresaId();
+        const contas = this.getContas();
+        const conta = contas.find(c => c.empresaId === id);
+        return conta ? (conta.empresa || conta.nome || conta.email.split('@')[0]) : '—';
     },
 
     // --- Contas (administradores) ---
@@ -120,6 +126,7 @@ const DB = {
         if (emailEmUso) return { erro: 'Este e-mail já está cadastrado.' };
         usuario.id = Date.now();
         usuario.empresaId = empId;
+        usuario.empresa = this.getNomeEmpresa(empId); // salva o nome da empresa
         lista.push(usuario);
         localStorage.setItem(`usuarios_${empId}`, JSON.stringify(lista));
         return { ok: true };
