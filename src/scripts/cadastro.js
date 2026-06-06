@@ -1,12 +1,24 @@
+// Máscara de CPF
+document.addEventListener('DOMContentLoaded', () => {
+    document.getElementById('cpf').addEventListener('input', function () {
+        let v = this.value.replace(/\D/g, '').slice(0, 11);
+        v = v.replace(/(\d{3})(\d)/, '$1.$2');
+        v = v.replace(/(\d{3})(\d)/, '$1.$2');
+        v = v.replace(/(\d{3})(\d{1,2})$/, '$1-$2');
+        this.value = v;
+    });
+});
+
 function fazerCadastro() {
     const empresa = document.getElementById('empresa').value.trim();
     const nome = document.getElementById('nome').value.trim();
+    const cpf = document.getElementById('cpf').value.trim();
     const email = document.getElementById('email').value.trim();
     const senha = document.getElementById('senha').value;
     const conf = document.getElementById('confirmar-senha').value;
     const erro = document.getElementById('erro');
 
-    if (!empresa || !nome || !email || !senha || !conf) {
+    if (!empresa || !nome || !cpf || !email || !senha || !conf) {
         erro.textContent = 'Preencha todos os campos.';
         return;
     }
@@ -21,7 +33,7 @@ function fazerCadastro() {
         return;
     }
 
-    const resultado = DB.salvarConta({ empresa, nome, email, senha });
+    const resultado = DB.salvarConta({ empresa, nome, cpf, email, senha });
 
     if (resultado.erro) {
         erro.textContent = resultado.erro;

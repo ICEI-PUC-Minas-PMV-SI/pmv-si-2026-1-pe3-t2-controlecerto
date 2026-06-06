@@ -11,11 +11,11 @@ document.addEventListener('DOMContentLoaded', () => {
         email: 'admin@gmail.com',
         senha: '123',
         nome: 'Admin',
+        cpf: '000.000.000-00',
         cargo: 'Administrador'
     };
     localStorage.setItem('contas', JSON.stringify([contaDemo]));
 
-    // Dados de exemplo vinculados à empresa demo
     localStorage.setItem(`receitas_${empresaId}`, JSON.stringify([
         { id: 1, tipo: 'receita', descricao: 'Consultoria em TI', valor: 3500.00, categoria: 'Serviços', data: '2026-05-02' },
         { id: 2, tipo: 'receita', descricao: 'Venda de produto', valor: 1200.00, categoria: 'Vendas', data: '2026-05-08' },

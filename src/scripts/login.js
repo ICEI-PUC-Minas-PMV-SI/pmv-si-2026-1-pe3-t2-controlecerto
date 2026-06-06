@@ -31,6 +31,7 @@ function fazerLogin() {
         logado = {
             email: admin.email,
             nome: admin.nome || admin.email.split('@')[0],
+            cpf: admin.cpf || '—',
             cargo: 'Administrador',
             empresaId: admin.empresaId,
             empresa: admin.empresa || admin.nome || admin.email.split('@')[0]
@@ -39,6 +40,7 @@ function fazerLogin() {
         logado = {
             email: funcionario.email,
             nome: funcionario.nome,
+            cpf: funcionario.cpf || '—',
             cargo: funcionario.cargo,
             empresaId: funcionario.empresaId,
             empresa: funcionario.empresa || '—'
