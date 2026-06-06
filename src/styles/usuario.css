@@ -1,0 +1,56 @@
+/* ---- Perfil ---- */
+
+.perfil-cards {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    margin-top: 32px;
+    background: var(--card-bg);
+    border-radius: 16px;
+    overflow: hidden;
+    max-width: 860px;
+}
+
+.perfil-card {
+    display: flex;
+    align-items: center;
+    padding: 20px 28px;
+    border-bottom: 1px solid rgba(169, 200, 255, 0.06);
+}
+
+.perfil-card:last-child {
+    border-bottom: none;
+}
+
+.perfil-card:nth-child(even) {
+    background: rgba(55, 65, 82, 0.35);
+}
+
+.perfil-card__label {
+    font-size: 15px;
+    font-weight: 800;
+    color: var(--blue-text);
+    width: 120px;
+    flex-shrink: 0;
+}
+
+.perfil-card__valor {
+    font-size: 15px;
+    font-weight: 700;
+    color: var(--white);
+}
+
+@media (max-width: 575px) {
+    .perfil-card {
+        padding: 16px 20px;
+    }
+
+    .perfil-card__label {
+        width: 90px;
+        font-size: 13px;
+    }
+
+    .perfil-card__valor {
+        font-size: 13px;
+    }
+}

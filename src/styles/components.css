@@ -317,3 +317,35 @@
         margin-left: 0;
     }
 }
+
+/* Adicionar ao components.css */
+
+.sidebar__logout {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    width: 100%;
+    margin-top: 12px;
+    padding: 10px 10px 10px 8px;
+    border-radius: 12px;
+    border: none;
+    background: transparent;
+    font-family: 'Nunito', sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--expense-color);
+    cursor: pointer;
+    transition: background 0.2s, color 0.2s;
+    text-align: left;
+}
+
+.sidebar__logout:hover {
+    background: rgba(232, 136, 125, 0.12);
+    color: #ff9e94;
+}
+
+.sidebar__logout i {
+    font-size: 18px;
+    width: 18px;
+    flex-shrink: 0;
+}

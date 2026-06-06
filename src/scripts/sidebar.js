@@ -11,7 +11,9 @@
 
         relatorios: `<svg class="sidebar__icon" xmlns="http://www.w3.org/2000/svg" width="16" height="17" viewBox="0 0 16 17" fill="none" aria-hidden="true"><path d="M2 2.125V13.4583C2 13.8341 2.14048 14.1944 2.39052 14.4601C2.64057 14.7257 2.97971 14.875 3.33333 14.875H14M5.33333 9.20833H10C10.3682 9.20833 10.6667 9.52546 10.6667 9.91667V11.3333C10.6667 11.7245 10.3682 12.0417 10 12.0417H5.33333C4.96514 12.0417 4.66667 11.7245 4.66667 11.3333V9.91667C4.66667 9.52546 4.96514 9.20833 5.33333 9.20833ZM5.33333 3.54167H12C12.3682 3.54167 12.6667 3.8588 12.6667 4.25V5.66667C12.6667 6.05787 12.3682 6.375 12 6.375H5.33333C4.96514 6.375 4.66667 6.05787 4.66667 5.66667V4.25C4.66667 3.8588 4.96514 3.54167 5.33333 3.54167Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>`,
 
-        administracao: `<svg class="sidebar__icon" xmlns="http://www.w3.org/2000/svg" width="16" height="17" viewBox="0 0 16 17" fill="none" aria-hidden="true"><path d="M6.66667 15.5833V10.9295M8 7.79166H8.00667M8 4.95832H8.00667M9.33333 10.9295V15.5833M10 11.3333C9.42301 10.8735 8.72123 10.625 8 10.625C7.27877 10.625 6.57699 10.8735 6 11.3333M10.6667 7.79166H10.6733M10.6667 4.95832H10.6733M5.33333 7.79166H5.34M5.33333 4.95832H5.34M4 1.41666H12C12.7364 1.41666 13.3333 2.05092 13.3333 2.83332V14.1667C13.3333 14.9491 12.7364 15.5833 12 15.5833H4C3.26362 15.5833 2.66667 14.9491 2.66667 14.1667V2.83332C2.66667 2.05092 3.26362 1.41666 4 1.41666Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>`
+        administracao: `<svg class="sidebar__icon" xmlns="http://www.w3.org/2000/svg" width="16" height="17" viewBox="0 0 16 17" fill="none" aria-hidden="true"><path d="M6.66667 15.5833V10.9295M8 7.79166H8.00667M8 4.95832H8.00667M9.33333 10.9295V15.5833M10 11.3333C9.42301 10.8735 8.72123 10.625 8 10.625C7.27877 10.625 6.57699 10.8735 6 11.3333M10.6667 7.79166H10.6733M10.6667 4.95832H10.6733M5.33333 7.79166H5.34M5.33333 4.95832H5.34M4 1.41666H12C12.7364 1.41666 13.3333 2.05092 13.3333 2.83332V14.1667C13.3333 14.9491 12.7364 15.5833 12 15.5833H4C3.26362 15.5833 2.66667 14.9491 2.66667 14.1667V2.83332C2.66667 2.05092 3.26362 1.41666 4 1.41666Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>`,
+
+        usuario: `<svg class="sidebar__icon" xmlns="http://www.w3.org/2000/svg" width="16" height="17" viewBox="0 0 16 17" fill="none" aria-hidden="true"><path d="M8 8.5C9.84095 8.5 11.3333 7.00762 11.3333 5.16667C11.3333 3.32572 9.84095 1.83334 8 1.83334C6.15905 1.83334 4.66667 3.32572 4.66667 5.16667C4.66667 7.00762 6.15905 8.5 8 8.5Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M2 15.1667C2 12.2212 4.68629 9.83334 8 9.83334C11.3137 9.83334 14 12.2212 14 15.1667" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>`
     };
 
     const navItems = [
@@ -19,7 +21,8 @@
         { href: 'receitas.html', label: 'Receitas', icon: SVG.receitas },
         { href: 'despesas.html', label: 'Despesas', icon: SVG.despesas },
         { href: 'relatorios.html', label: 'Relatórios', icon: SVG.relatorios },
-        { href: 'administracao.html', label: 'Administração', icon: SVG.administracao, adminOnly: true }
+        { href: 'administracao.html', label: 'Administração', icon: SVG.administracao, adminOnly: true },
+        { href: 'usuario.html', label: 'Meu Perfil', icon: SVG.usuario }
     ];
 
     const menuHTML = navItems
@@ -58,9 +61,19 @@
                         <span class="sidebar__user-role"    id="sidebar-cargo">${usuarioLogado.cargo || '—'}</span>
                     </div>
                 </div>
+                <button class="sidebar__logout" onclick="sair()">
+                    <i class="bi bi-box-arrow-left" aria-hidden="true"></i>
+                    <span>Sair</span>
+                </button>
             </footer>
         </aside>`;
 
     const root = document.getElementById('sidebar-root');
     if (root) root.outerHTML = html;
+
+    window.sair = function () {
+        localStorage.removeItem('logado');
+        localStorage.removeItem('usuarioLogado');
+        window.location.href = '../../pages/index.html';
+    };
 })();
